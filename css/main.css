@@ -840,3 +840,112 @@ nav{
 .reviews__right{
 	width: 70%;
 }
+.footer{
+	background: url(../img/footer.jpg) no-repeat center;
+	background-size: cover;
+	padding: 60px 0;
+}
+.footer .title{
+	color: #B2B2B2;
+}
+.footer .title{
+	margin-bottom: 110px;
+}
+.footer_dop{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.footer__info{
+	width: 40%;
+}
+.footer__text{
+	width: 60%;
+}
+.info{
+	background: #28585F;
+	margin-bottom: 40px;
+	padding: 15px 25px 15px 55px;
+	max-width: 300px;
+	width: 100%;
+	min-width: 300px;
+	display: block;
+	color: #ffffff;
+	font-family: DINB;
+	letter-spacing: 0.05em;
+	text-decoration: none;
+	min-height: 72px; 
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: 18px;
+}
+.footer__contacts .info:nth-child(1){
+	background-image: url(../img/icons/house.svg);
+}
+.footer__contacts .info:nth-child(2){
+	background-image: url(../img/icons/small-phone.svg);
+}
+.footer__contacts .info:nth-child(3){
+	background-image: url(../img/icons/gmail.svg);
+}
+.footer__title{
+	font-family: DINB;
+	color: #ffffff;
+	font-size: 55px;
+	line-height: 65px;
+	margin-bottom: 33px;
+	max-width: 600px;
+}
+.footer__copyright{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 60px;
+}
+.copyright{
+	color: #ffffff;
+	letter-spacing: 0.05em;
+	font-size: 16px;
+	line-height: 20px;
+	position: relative;
+	display: inline-block;
+}
+.footer__line{
+	height: 1px;
+	background: #B2B2B2;
+	display: inline-block;
+	width: 50%;
+}
+
+.footer__soc a:nth-child(1) i {
+	background: url(../img/icons/linkedin.svg) no-repeat center;
+	background-size: contain;
+}
+.footer__soc a:nth-child(2) i {
+	background: url(../img/icons/twitter.svg) no-repeat center;
+	background-size: contain;
+}
+.footer__soc a:nth-child(3) i {
+	background: url(../img/icons/facebook.svg) no-repeat center;
+	background-size: contain;
+}
+.footer__soc a:not(:last-child){
+	margin-right: 55px;
+}
+.footer__soc a, .footer__soc a i{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+}
