@@ -30,5 +30,78 @@ $('.right__big-slider').slick({
 	
 
 
+    $('.case__slider.v1').each(function(){
+    var $status = $('.slider-project__num');
+    var $slickElement = $(this);
+    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        var i = (currentSlide ? currentSlide : 0) + 1;    
+        $('.slider-project__num', slick.$slider.parent()).html(`<span class="current"> ${i} </span> <span> / ${slick.slideCount}</span> `);
+    });
+    $slickElement.slick({
+        slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      infinite: false,
+      });
+  });
+
+    $('.case__slider.v2').each(function(){
+    var $status = $('.slider-project__num');
+    var $slickElement = $(this);
+    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        var i = (currentSlide ? currentSlide : 0) + 1;    
+        $('.slider-project__num', slick.$slider.parent()).html(`<span class="current"> ${i} </span> <span> / ${slick.slideCount}</span> `);
+    });
+    $slickElement.slick({
+        slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      infinite: false,
+      });
+  });
+
+    $('.case__slider.v3').each(function(){
+    var $status = $('.slider-project__num');
+    var $slickElement = $(this);
+    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        var i = (currentSlide ? currentSlide : 0) + 1;    
+        $('.slider-project__num', slick.$slider.parent()).html(`<span class="current"> ${i} </span> <span> / ${slick.slideCount}</span> `);
+    });
+    $slickElement.slick({
+        slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      infinite: false,
+      });
+  });
+
+    $('.case__slider.v4').each(function(){
+    var $status = $('.slider-project__num');
+    var $slickElement = $(this);
+    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        var i = (currentSlide ? currentSlide : 0) + 1;    
+        $('.slider-project__num', slick.$slider.parent()).html(`<span class="current"> ${i} </span> <span> / ${slick.slideCount}</span> `);
+    });
+    $slickElement.slick({
+        slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      infinite: false,
+      });
+  });
+
+
+function timeout(){
+  $('.case__slider').slick('setPosition');
+  $(window).resize();
+
+}
+$('.tabs__caption').click(function(){
+  $('.case__slider').each(function(e){
+    $(`.case__slider:eq(${e})`).slick('setPosition');
+    timeout();
+  });
+});
+
 
 })(jQuery);
