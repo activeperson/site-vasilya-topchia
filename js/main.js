@@ -8,16 +8,27 @@ $(function() {
   });
  
 });
-
-
-
- $('.reviews__mini-slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  infinite: false,
-  asNavFor: '.right__big-slider'
+$('.modal .form-button').on('click', function(e){
+  e.preventDefault();
 });
+$('.close').on('click', function(e){
+  e.stopPropagation();
+  $('.modal-wrap').toggleClass('active');
+});
+
+$('.default-button.www').on('click', function(e){
+  e.stopPropagation();
+$('.modal-wrap').toggleClass('active');
+});
+$('body').on('keydown', function(e){
+  if($('.modal-wrap').hasClass('active')){
+    if(e.keyCode == 27){
+    $('.modal-wrap').toggleClass('active');
+  }
+  }
+  
+})
+
 $('.right__big-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -25,10 +36,30 @@ $('.right__big-slider').slick({
   dots: true,
  infinite: false,
   centerMode: false,
-  focusOnSelect: true
+  focusOnSelect: true,
+  cssEase: 'linear',
+  fade: true
 });
 	
-
+ $('.reviews__mini-slider').each(function(){
+    var $status = $('.num');
+    var $slickElement = $(this);
+    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        var i = (currentSlide ? currentSlide : 0) + 1;    
+        $('.num', slick.$slider.parent()).html(`<span class="current"> ${i} </span> <span> / ${slick.slideCount}</span> `);
+    });
+    $slickElement.slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  arrows: true,
+  infinite: false,
+  asNavFor: '.right__big-slider',
+  focusOnSelect: true,
+  prevArrow: $('.arrow-prev'),
+    nextArrow: $('.arrow-next'),
+    cssEase: 'linear',
+});
+  });
 
     $('.case__slider.v1').each(function(){
     var $status = $('.slider-project__num');
